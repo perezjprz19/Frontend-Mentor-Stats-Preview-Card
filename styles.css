@@ -1,0 +1,73 @@
+
+/*##############################################################################
+                                                            GLOBAL SETTINGS
+##############################################################################*/
+:root {
+  /*Colors*/
+  --main-bg-color: hsl(233, 47%, 7%);
+  --card-bg-color: hsl(244, 38%, 16%);
+  --accent-color: hsl(277, 64%, 61%);
+
+  /*Font-color*/
+  --main-heading: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stats: hsla(0, 0%, 100%, 0.6);
+
+  /*Font*/
+  --primary-font: 'Inter', sans-serif;
+  --secondary-font: 'Lexend Deca', sans-serif;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+main {
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-self: center;
+}
+/*##############################################################################
+                                                            TEXT
+##############################################################################*/
+
+h1 {
+ color: var(--main-heading);
+}
+
+.header-accent {
+  color: var(--accent-color);
+}
+
+.main-paragraph  {
+  color: var(--main-paragraph);
+  font-size: 1.1em;
+  text-align: center;
+
+}
+
+.stats-list {
+  color: var(--main-heading) ;
+  display:block;
+  text-transform: uppercase;
+}
+
+.stats-list > span {
+  color: var(--stats);
+}
+.attribution {
+  font-size: 0.8em;
+   text-align: center;
+   color: var(--stats);
+ }
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*##############################################################################
+                                                        CONTAINERS
+##############################################################################*/
+.text-container {
+  display:flex;
+  flex-direction: column;
+}
