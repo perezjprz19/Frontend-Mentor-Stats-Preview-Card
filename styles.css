@@ -20,6 +20,7 @@
 
 body {
   background-color: var(--main-bg-color);
+    margin: 0;
 }
 
 main {
@@ -27,6 +28,7 @@ main {
   display:flex;
   justify-content: center;
   align-self: center;
+  align-items: center;
 }
 /*##############################################################################
                                                             TEXT
@@ -70,4 +72,22 @@ h1 {
 .text-container {
   display:flex;
   flex-direction: column;
+  background-color: var(--card-bg-color);
+  width: min(90%, 370px);
+  overflow-x: hidden;
+
+}
+
+.overlay {
+  background: var(--accent-color);
+  width: 100%;
+  border-radius:  5px 5px 0 0;
+
+}
+
+.overlay::before {
+  content: url("images/image-header-mobile.jpg");
+  z-index: -1;
+  opacity: 0.5;
+  height: 300px;
 }
