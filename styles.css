@@ -115,14 +115,14 @@ ul>li {
   background-image: url('images/image-header-mobile.jpg');
   height: 270px;
   width: 100%;
-  ;
   repeat: no-repeat;
   background-size: cover;
 }
 
 .overlay::before {
   content: "";
-  background: hsl(277, 93%, 31%, 0.5);
+  background: hsl(277, 64%, 61%);
+  mix-blend-mode: multiply;
   width: 100%;
   height: 100%;
   position: absolute;
