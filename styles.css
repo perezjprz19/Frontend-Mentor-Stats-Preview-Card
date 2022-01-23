@@ -1,4 +1,3 @@
-
 /*##############################################################################
                                                             GLOBAL SETTINGS
 ##############################################################################*/
@@ -7,92 +6,116 @@
   --main-bg-color: hsl(233, 47%, 7%);
   --card-bg-color: hsl(244, 38%, 16%);
   --accent-color: hsl(277, 64%, 61%);
-
   /*Font-color*/
   --main-heading: hsl(0, 0%, 100%);
   --main-paragraph: hsla(0, 0%, 100%, 0.75);
   --stats: hsla(0, 0%, 100%, 0.6);
-
   /*Font*/
   --primary-font: 'Inter', sans-serif;
   --secondary-font: 'Lexend Deca', sans-serif;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: var(--main-bg-color);
+  justify-content: center;
+  align-items: center;
 }
 
 main {
-  position: relative;
-  display:flex;
+  display: flex;
   justify-content: center;
-  align-self: center;
   align-items: center;
 }
+
 /*##############################################################################
                                                             TEXT
 ##############################################################################*/
-
 h1 {
- color: var(--main-heading);
- text-align: center;
- font-family: var(--primary-font);
- font-weight: 700;
- line-height: normal;
- margin:
-
+  color: var(--main-heading);
+  text-align: center;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  line-height: normal;
+  font-size: 1.9em;
 }
 
 .header-accent {
   color: var(--accent-color);
 }
 
-.main-paragraph  {
+.main-paragraph {
   color: var(--main-paragraph);
   font-size: 1em;
-  font-family:  var(--primary-font);
+  font-family: var(--primary-font);
   font-weight: 400;
-
 }
 
-.stats-list {
-  color: var(--main-heading) ;
-  display:block;
+.stats {
+  color: var(--main-heading);
+  font-family: var(--primary-font);
+  font-weight: 700;
+  list-style: none;
   text-transform: uppercase;
 }
 
-.stats-list > span {
-  color: var(--stats);
+.stat-number {
+  font-size: 1.5em;
 }
+
+.stat-category {
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  font-size: .75em;
+  color: var(--stats);
+  letter-spacing: .1em;
+  display: block;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
+}
+
+ul>li {
+  margin: 1.5em;
+}
+
 .attribution {
   font-size: 0.8em;
-   text-align: center;
-   color: var(--stats);
- }
+  text-align: center;
+  color: var(--stats);
+}
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
 /*##############################################################################
                                                         CONTAINERS
 ##############################################################################*/
 .wrapper {
-  display:flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background-color: var(--card-bg-color);
-  width: min(85%, 375px);
+  width: min(90%, 375px);
   overflow-x: hidden;
+  border-radius: 10px;
 }
 
-
 .overlay {
-    position:relative;
-    background-image: url('images/image-header-mobile.jpg');
-    height:270px;
-    width: 100%;;
-    repeat: no-repeat;
-    background-size:cover;
-      border-radius: 10px 10px 0 0;
-
+  position: relative;
+  background-image: url('images/image-header-mobile.jpg');
+  height: 270px;
+  width: 100%;
+  ;
+  repeat: no-repeat;
+  background-size: cover;
 }
 
 .overlay::before {
@@ -102,14 +125,56 @@ h1 {
   height: 100%;
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: 0;
-border-radius: 10px 10px 0 0;
-
 }
+
 .text-container {
-  margin: .7em;
+  display: flex;
+  flex-direction: column;
   line-height: 1.5em;
   justify-content: center;
   text-align: center;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
 }
+
+/*##############################################################################
+                                                        MEDIA QUERIES
+##############################################################################*/
+@media only screen and (min-width: 1000px) {
+  body {
+    height: 100vh;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 95%;
+  }
+
+  .text-container {
+    text-align: left;
+    width:40%;
+    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+  }
+
+  h1 {
+    text-align: left;
+
+  }
+
+  .overlay {
+    background-image: url('images/image-header-desktop.jpg');
+    width: 60%;
+    height: 410px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-left: -2em;
+  }
+};
