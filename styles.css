@@ -21,6 +21,7 @@ body {
   background-color: var(--main-bg-color);
   justify-content: center;
   align-items: center;
+  height:100%;
 }
 
 main {
@@ -98,6 +99,7 @@ ul>li {
                                                         CONTAINERS
 ##############################################################################*/
 .wrapper {
+
   display: flex;
   justify-content: center;
   align-items: center;
