@@ -115,7 +115,7 @@ ul>li {
   width: 100%;
   repeat: no-repeat;
   background-size: cover;
-  filter: contrast(80%);
+  filter: contrast(75%);
 }
 
 .overlay::before {
