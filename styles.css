@@ -21,7 +21,6 @@ body {
   background-color: var(--main-bg-color);
   justify-content: center;
   align-items: center;
-  height:100%;
 }
 
 main {
@@ -99,7 +98,6 @@ ul>li {
                                                         CONTAINERS
 ##############################################################################*/
 .wrapper {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,11 +115,13 @@ ul>li {
   width: 100%;
   repeat: no-repeat;
   background-size: cover;
+  filter: contrast(80%);
 }
 
 .overlay::before {
   content: "";
   background: hsl(277, 64%, 61%);
+  filter: saturate(1.5);
   mix-blend-mode: multiply;
   width: 100%;
   height: 100%;
@@ -143,7 +143,7 @@ ul>li {
                                                         MEDIA QUERIES
 ##############################################################################*/
 @media only screen and (min-width: 1000px) {
-  body {
+  main {
     height: 100vh;
   }
 
@@ -151,12 +151,12 @@ ul>li {
     display: flex;
     flex-direction: row-reverse;
     width: 95%;
+    max-height: 100%;
   }
 
   .text-container {
     text-align: left;
-    width:40%;
-    max-width: 50%;
+    width: 40%;
     justify-content: center;
     align-items: center;
     margin: 2em;
@@ -164,13 +164,12 @@ ul>li {
 
   h1 {
     text-align: left;
-
   }
 
   .overlay {
     background-image: url('images/image-header-desktop.jpg');
-    width: 60%;
-    height: 410px;
+    width: 50%;
+    height: 420px;
   }
 
   ul {
